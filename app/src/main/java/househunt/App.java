@@ -3,12 +3,21 @@
  */
 package househunt;
 
+import java.util.List;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+    // Location: Zipcode Distances School Walkability
+    private static final List<Location> locations = List.of(
+            new Location(91740, "Glendora", 0, 5),
+            new Location(95001, "Shire", 100, 0)
+    );
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println("Zipcode:\t Neighborhood\t Walk Score\t School Score");
+        for (Location l : locations) {
+            System.out.printf("%d:\t\t %s\t\t %d\t\t %d\n", l.getZipcode(), l.getNeighborhood(), l.getWalkScore(),
+                    l.getSchoolScore());
+        }
     }
+
 }
