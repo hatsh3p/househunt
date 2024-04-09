@@ -15,8 +15,15 @@ public final class TableWriter {
         table.add(row);
     }
 
+    // Replace with StringBuilder.
     @Override
     public String toString() {
+        for (List<String> l : table) {
+            for (String s : l) {
+                System.out.print("%s ");
+            }
+            System.out.println();
+        }
         return super.toString();
     }
 }
