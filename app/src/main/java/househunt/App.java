@@ -6,7 +6,6 @@ package househunt;
 import java.util.List;
 
 public class App {
-    // Location: Zipcode Distances School Walkability
     private static final List<Location> locations = List.of(
             new Location(91740, "Glendora", 0, 5),
             new Location(95001, "Shire", 100, 0)
