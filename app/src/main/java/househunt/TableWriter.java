@@ -18,12 +18,18 @@ public final class TableWriter {
     // Replace with StringBuilder.
     @Override
     public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("House Hunter Results\n");
+        builder.append(String.format("%89s", "-").replace(' ', '-')); //hard coded
+        builder.append('\n');
         for (List<String> l : table) {
             for (String s : l) {
-                System.out.print("%s ");
+                builder.append(String.format("| %-20s", s));
             }
-            System.out.println();
+            builder.append("|\n");
         }
-        return super.toString();
+        builder.append(String.format("%89s", "-").replace(' ', '-')); //hard coded
+        builder.append('\n');
+        return builder.toString();
     }
 }
