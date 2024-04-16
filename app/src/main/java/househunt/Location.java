@@ -29,5 +29,6 @@ public final class Location {
     public int getSchoolScore() {
         return schoolScore;
     }
-    
+
+
 }
